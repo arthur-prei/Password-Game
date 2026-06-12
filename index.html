@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="header">
+            <h1 id="title">Adivinhe a Senha!</h1>
+            <h3 id="info"></p>
+        </div>
+        <section class="container">
+            <h3>Tentativas restantes: <span id="attempts"></span></h3>
+            <div class="game-info">
+                <div class="secret-chars">
+                    <h4 id="first">?</h4>
+                    <h4 id="second">?</h4>
+                    <h4 id="third">?</h4>
+                    <h4 id="fourth">?</h4>
+                </div>
+                <div class="player-record">
+                    <h3>Sequência: <span id="sequence">0</span></h3>
+                    <h3>Recorde: <span id="record">0</span></h3>
+                </div>
+            </div>
+            <div class="interact">
+                <input type="text" maxlength="4" readonly>
+                <div class="interact-buttons">
+                    <button type="button" id="clear">Limpar</button>
+                    <button type="button" id="submit-btn">Enviar</button>
+                </div>
+            </div>
+            <div class="buttons">
+                <button id="1" type="button">1 <span></span></button>
+                <button id="2" type="button">2 <span></span></button>
+                <button id="3" type="button">3 <span></span></button>
+                <button id="4" type="button">4 <span></span></button>
+                <button id="5" type="button">5 <span></span></button>
+                <button id="6" type="button">6 <span></span></button>
+                <button id="7" type="button">7 <span></span></button>
+                <button id="8" type="button">8 <span></span></button>
+                <button id="9" type="button">9 <span></span></button>
+                <button class="zero" id="0" type="button">0 <span></span></button>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
