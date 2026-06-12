@@ -52,7 +52,6 @@ main #info {
 h4 {
     color: var(--text-color);
     text-shadow: 2px 2px var(--primary-color);
-    border-bottom: 2px solid var(--text-color);
     text-align: center;
     width: 50px;
     margin: 0;

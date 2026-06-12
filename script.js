@@ -5,7 +5,7 @@ const passwordChars = [
     "fourth"
 ];
 
-let userAttempts = 7;
+let userAttempts = 5;
 
 const infoText = $("#info");
 const remainingAttempts = $("#attempts");
@@ -79,6 +79,10 @@ function resetValues() {
         $("button").removeClass("correct exists wrong");
         $(".buttons span").hide();
     }
+    for (let i = 1; i<$(".letter-buttons button").length + 1; i++) {
+        $("button").removeClass("correct exists wrong");
+        $(".letter-buttons span").hide();
+    }
 
     passwordChars.forEach(id => {
         $("#" + id).text("?").css("color", textColor);
@@ -88,7 +92,7 @@ function resetValues() {
     $("input").val("");
 
     userPassword = "";
-    userAttempts = 7;
+    userAttempts = 5;
 
     sequenceSpan.text(playerCurrentRun);
     recordSpan.text(playerRecord);
