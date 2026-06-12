@@ -32,6 +32,7 @@ main {
 
     max-height: 850px;
     max-width: 650px;
+    min-width: 650px;
 
     letter-spacing: 3px;
     border-radius: 5px;

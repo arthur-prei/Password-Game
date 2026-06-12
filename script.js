@@ -57,7 +57,7 @@ $(".buttons button").on("click", function () {
 
 
 function generatePassword(chars) {
-    let available = ["1","2","3","4","5","6","7","8","9"];
+    let available = ["1","2","3","4","5","6","7","8","9","0"];
     let newPassword = "";
     while (newPassword.length < chars) {
         let randomNumber = Math.floor(Math.random() * available.length);
