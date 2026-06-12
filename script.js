@@ -5,7 +5,7 @@ const passwordChars = [
     "fourth"
 ];
 
-let userAttempts = 5;
+let userAttempts = 7;
 
 const infoText = $("#info");
 const remainingAttempts = $("#attempts");
@@ -44,7 +44,7 @@ $("#clear").on("click", function () {
 });
 
 
-$(".buttons button").on("click", function () {
+$(".buttons button, .letter-buttons button").on("click", function () {
     if (userPassword.length === 4) {
         return;
     }
@@ -57,7 +57,7 @@ $(".buttons button").on("click", function () {
 
 
 function generatePassword(chars) {
-    let available = ["1","2","3","4","5","6","7","8","9","0"];
+    let available = ["1","2","3","4","5","6","7","8","9","0","A","B","C","D","E","F"];
     let newPassword = "";
     while (newPassword.length < chars) {
         let randomNumber = Math.floor(Math.random() * available.length);
@@ -88,7 +88,7 @@ function resetValues() {
     $("input").val("");
 
     userPassword = "";
-    userAttempts = 5;
+    userAttempts = 7;
 
     sequenceSpan.text(playerCurrentRun);
     recordSpan.text(playerRecord);
