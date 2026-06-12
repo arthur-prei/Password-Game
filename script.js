@@ -20,6 +20,8 @@ let userPassword = "";
 let playerRecord = 0;
 let playerCurrentRun = 0;
 
+let roundHasFinished = false;
+
 const recordSpan = $("#record");
 const sequenceSpan = $("#sequence");
 
@@ -27,6 +29,10 @@ remainingAttempts.text(userAttempts);
 
 
 $("#submit-btn").on("click", () => {
+    if (roundHasFinished) {
+        return;
+    }
+
     if ($("#error-msg")) {
                 $("#error-msg").remove();
             }
@@ -141,6 +147,8 @@ function validatePasswords() {
     }
     if (equalDigits === gamePassword.length) {
         playerCurrentRun++;
+        roundHasFinished = true;
+        
         if (playerCurrentRun > playerRecord) {
             playerRecord = playerCurrentRun;
         }
