@@ -99,6 +99,7 @@ function resetValues() {
 
     userPassword = "";
     userAttempts = 5;
+    roundHasFinished = false;
 
     sequenceSpan.text(playerCurrentRun);
     recordSpan.text(playerRecord);
