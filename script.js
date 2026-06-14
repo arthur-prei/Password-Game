@@ -74,7 +74,6 @@ function generatePassword(chars) {
 
     infoText.text("uma nova senha foi gerada!");
     infoText.css("color", "lime");
-    console.log(newPassword)
     return newPassword;
 }
 
